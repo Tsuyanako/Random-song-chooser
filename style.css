@@ -33,7 +33,7 @@ body {
 }
 
 .image-container {
-    flex: 0.6;
+    flex: 0.8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +46,20 @@ body {
     object-fit: contain;
 }
 
+#lyricsButton {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgb(91, 124, 136);
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: dotted underline;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS';
+    margin-bottom: 20px;
+}
+
 #chooseButton {
     background-color: rgba(6, 148, 176, 0.8);
     border: none;
@@ -56,9 +70,13 @@ body {
     border-radius: 16px;
     cursor: pointer;
     font-family: 'Comic Sans MS';
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 button:active {
     transform: scale(0.98);
+}
+
+.hidden {
+    display: none;
 }
