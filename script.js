@@ -70,13 +70,16 @@ function getRandomSong() {
 
 function openNav() {
     const sidebar = document.querySelector('.side-bar');
-    sidebar.classList.toggle('open');
-    
     const navButton = document.querySelector('.nav-button');
+    
+    sidebar.classList.toggle('open');
+    navButton.classList.toggle('open');
+    
     if (sidebar.classList.contains('open')) {
         navButton.innerHTML = '&times;';
     } else {
         navButton.innerHTML = '&#9776;';
+        navButton.classList.remove('open');
     }
 }
 

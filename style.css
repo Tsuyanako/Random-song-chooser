@@ -95,10 +95,32 @@ button:active {
 }
 
 .nav-button {
+    border: none;
+    background: transparent;
+    color: rgb(69, 224, 255);
+    padding: 8px 7px;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
     position: fixed;
     top: 10px;
     right: 10px;
     z-index: 101;
+    transition: transform 0.2s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+}
+
+.nav-button.open {
+    font-size: 36px;
+    padding: 0 12px;
 }
 
 .mod-buttons{
