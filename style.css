@@ -6,13 +6,16 @@
 
 body {
     background-color: black;
-    font-family: 'Comic Sans MS';
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    font-weight: 700;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+/* ------ css for main page ------ */
 .container {
     width: 100%;
     max-width: 500px;
@@ -23,13 +26,12 @@ body {
 }
 
 .song-label {
-    color: rgb(27, 169, 160);
-    font-size: 18px;
-    font-weight: bold;
+    color: rgb(13, 171, 203);
+    font-size: 22px;
+    font-weight: 10000;
     text-align: center;
     padding: 10px;
-    margin-top: 6vh;
-
+    margin-top: 4vh;
 }
 
 .image-container {
@@ -41,8 +43,8 @@ body {
 }
 
 #songImage {
-    max-width: 100%;
-    max-height: 70vh;
+    max-width: 80%;
+    max-height: 32vh;
     object-fit: contain;
 }
 
@@ -52,11 +54,11 @@ body {
     color: rgb(91, 124, 136);
     padding: 5px 10px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: dotted underline;
     border-radius: 16px;
     cursor: pointer;
-    font-family: 'Comic Sans MS';
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
     margin-bottom: 20px;
 }
 
@@ -66,10 +68,10 @@ body {
     color: white;
     padding: 30px 50px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 16px;
     cursor: pointer;
-    font-family: 'Comic Sans MS';
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
     margin-bottom: 10px;
 }
 
@@ -79,4 +81,160 @@ button:active {
 
 .hidden {
     display: none;
+}
+
+
+/* ------ css for side bar ------ */
+.side-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.nav-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 101;
+}
+
+.mod-buttons{
+    margin-top: 10vh;
+}
+
+.mod-button:hover {
+    background-color: rgba(116, 209, 255, 0.547);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.mod-button:active,
+.mod-button.active {
+    background-color: rgba(116, 209, 255, 0.547);
+    color: white;
+    transform: translateY(0);
+}
+
+
+/* --- Mobile layout --- */
+@media screen and (max-width: 768px) {
+    .mod-button {
+        height: auto;
+        width: 32vh;  
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        color: rgb(69, 224, 255);
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 12px;
+        cursor: pointer;
+        font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+        margin-bottom: 2vh;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.15s ease, color 0.12s ease, transform 0.08s ease;
+    }
+
+    .side-bar {
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background-color: rgba(0, 50, 60, 0.994);
+        align-items: center;
+        transition: right 0.3s ease;
+    }
+
+    .side-bar.open {
+        right: 0;
+    }
+}
+
+/* --- Desktop layout --- */
+@media screen and (min-width: 769px) {
+    .mod-button {
+        height: auto;
+        width: 32vh;  
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 50, 60, 0.994);
+        border: none;
+        color: rgb(69, 224, 255);
+        padding: 15px 35px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 12px;
+        cursor: pointer;
+        font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+        margin-bottom: 2vh;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.15s ease, color 0.12s ease, transform 0.08s ease;
+    }
+    .side-bar {
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 50%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px;
+        margin-left: 25%;
+        border-radius: 50px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .mod-buttons {
+        margin-top: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .mod-button {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .container {
+        margin-top: 80px;
+    }
+}
+
+
+/* ------ css for lyrics ------ */
+h1 {
+    color: rgb(27, 169, 160);
+    text-align: center;
+    font-weight: 700;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.lyrics-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.lyrics {
+    text-align: left;
+    margin-top: 30px;
+    color : rgb(27, 169, 160);
+}
+
+.lyrics p {
+    margin-bottom: 20px;
+    color : rgb(27, 169, 160);
 }

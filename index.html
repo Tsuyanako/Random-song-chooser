@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Chooser</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="song-label" id="songLabel">Click the button to choose a song</div>
         <div class="image-container">
-            <img src="home-page.jpeg" id="songImage" alt="Song Image">
+            <img src="images/home-page.jpeg" id="songImage" alt="Song Image">
         </div>
         <button id="chooseButton">Choose Random Song</button>
         <button id="lyricsButton" class="hidden">Song lyrics</button>
     </div>
+    <div class="side-bar">
+        <button class="nav-button" onclick="openNav()">&#9776;</button>
+        <div class="mod-buttons">
+            <button class="mod-button" onclick="appModDefine('all')">All Songs</button>
+            <button class="mod-button" onclick="appModDefine('tsuya')">Tsuya Songs</button>
+            <button class="mod-button" onclick="appModDefine('bee')">Bee Songs</button>
+        </div>
+    </div>
+
+
+
+
+
     <script src="script.js"></script>
 </body>
 </html>
